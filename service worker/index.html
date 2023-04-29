@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Worker</title>
+</head>
+
+<body>
+    <p>
+        We have workers in JavaScript and there are three sections of workers.
+        Web Worker, Web Socket and Service Worker.
+        These are script that run in the background without interfering the UI.
+        In another word, we can say that these workers run in a seperate thread than the main
+        browser thread which helps to improve the application performance because it does not
+        bother excessive activities of the main thread.
+    </p>
+    <h3>DIFFERENCES</h3>
+    <p>
+        The web workers and web socket have DOM access whereas service worker has no dom access because
+        it runs on a worker context.
+        The web socket is actually a part of main thread that helps to access and manipulate the DOM.
+    </p>
+    <h3>WEB WORKER</h3>
+    We know that our HTML perser, parses the html code line by line and as soon as it finds the
+    script tag, it blocks the entire UI until we the output of the script. So, in order ot overcome from this blocking
+    nature, we use web worker. Web worker actually runs the script tag in a different environment so
+    that our complex operations don't bock the UI and generate the script output from different thread and provide the
+    output.
+
+    <p>
+        Web workers are used to run the code in a background script.
+    </p>
+    <p>
+        We can create a worker object using contstructor worker()
+    </p>
+    <p>
+        Workers run in a different global context
+    </p>
+    <p>
+        We use workers to do complex operations without interfering the UI
+    </p>
+    <P>
+        We can sent and accept messsages or data from UI using events.
+    </P>
+
+    var workerObj = new Worker('workerFileName.js'); <br>
+    We use onMessage(); To receive the messsages
+    postMessage(); to send the data or messages
+</body>
+
+</html>
